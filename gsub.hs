@@ -27,7 +27,7 @@ gsub text match replacement = replaceMatches 0 matches text
         where
           matches = (expr =~ pattern :: [MatchText String]) !! 0
           f :: Char -> Char -> String
-          f i '\\' = []
+          f _ '\\' = []
           f '\\' i
             | isDigit i = fst $ matches ! read [i]
             | otherwise = '\\':[i]
