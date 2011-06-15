@@ -1,6 +1,6 @@
 module Regex where
 
-import Text.Regex.Posix
+import Text.Regex.Posix (getAllMatches, (=~), AllMatches, MatchOffset, MatchLength)
 
 -------------------------------------------------------------------------------
 gsub :: String -> String -> String -> String
