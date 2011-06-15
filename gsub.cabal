@@ -49,6 +49,7 @@ Cabal-version:       >= 1.6
 Library
   hs-source-dirs:
     src/
+  Exposed-Modules: Text.Regex.Gsub
 
   -- .hs or .lhs file containing the Main module.
   -- Main-is: Main.hs
@@ -62,6 +63,7 @@ Library
   -- Packages needed in order to build this package.
   Build-depends:
     base >= 4 && < 5,
+    array >= 0.3.0.2,
     containers,
     mtl >= 2 && < 3,
     regex-base,
