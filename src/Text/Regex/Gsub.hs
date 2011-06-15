@@ -1,8 +1,7 @@
-module Regex where
+module Text.Regex.Gsub 
+  (gsub) where
 
-import Text.Regex.Posix (getAllMatches, (=~), AllMatches, MatchOffset, MatchLength, MatchText)
-
--- import Text.Regex.Posix (getAllMatches, (=~), AllMatches, MatchOffset, MatchLength, MatchText)
+import Text.Regex.Posix ((=~),  MatchText)
 import Data.Array ((!))
 import Data.Char (isDigit)
 
@@ -33,6 +32,6 @@ gsub text match replacement = replaceMatches 0 matches text
             | otherwise = '\\':[i]
           f _ x = [x]
 
-main :: IO ()
-main = print (gsub "roman andre gonzalez urdaneta" "a(.)" "[\\0 \\1]")
+--main :: IO ()
+--main = print (gsub "roman andre gonzalez urdaneta" "a(.)" "[\\0 \\1]")
 
