@@ -1,0 +1,56 @@
+Name:                regex-pcre-gsub
+
+Version:             0.0.1
+
+Synopsis:           gsub like functionality for regex posix library
+
+
+Homepage:            http://github.com/HaskVan/regex-pcre-gsub
+
+License:             MIT
+
+License-file:        LICENSE
+
+Author:              Tatsuhiro Ujihisa, Roman Gonzalez
+
+Maintainer:          ujihisa@gmail.com, romanandreg@gmail.com
+
+Category:            Development
+
+Build-type:          Simple
+
+Cabal-version:       >= 1.10
+
+
+Library
+  hs-source-dirs:
+    src/
+  Exposed-Modules:
+    Text.Regex.PCRE.Gsub,
+    Text.Regex.PCRE.ByteString.Gsub
+
+  Build-depends:
+    base              >= 4 && < 5,
+    bytestring        >= 0.10 && < 0.11,
+    array             == 0.4.0.1,
+    containers        == 0.5.2.1,
+    mtl               >= 2 && < 3,
+    regex-base        >= 0.93 && < 1,
+    regex-pcre        >= 0.93 && < 1
+
+Test-Suite gsub-tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs:
+    test/
+  Main-is: TestSuite.hs
+  Build-depends:
+    base              >= 4 && < 5,
+    bytestring        >= 0.10 && < 0.11,
+    array             == 0.4.0.1,
+    containers        == 0.5.2.1,
+    mtl               >= 2 && < 3,
+    regex-base        >= 0.93 && < 1,
+    regex-pcre        == 0.94.4,
+    regex-pcre-gsub   == 0.0.1,
+    hspec             >= 1.7 && < 1.8,
+    HUnit             >= 1.2 && < 1.3
