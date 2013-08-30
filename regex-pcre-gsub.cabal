@@ -1,6 +1,6 @@
 Name:                regex-pcre-gsub
 
-Version:             0.0.1
+Version:             0.0.1.0
 
 Synopsis:           gsub like functionality for regex posix library
 
