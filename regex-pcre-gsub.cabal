@@ -30,7 +30,7 @@ Library
     regex-base        >= 0.93 && < 1,
     regex-pcre        >= 0.93 && < 1
 
-executable testloop
+executable regex_pcre_gsub_testloop
   hs-source-dirs: src, test
   Main-is: TestLoop.hs
   if flag(testloop)
@@ -48,7 +48,7 @@ executable testloop
   else
     Buildable: False
 
-Test-Suite tests
+Test-Suite regex_pcre_gsub_tests
   type: exitcode-stdio-1.0
   hs-source-dirs: src, test
   Main-is: TestSuite.hs
